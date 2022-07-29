@@ -21,6 +21,14 @@ import {
 const reportData = multipartReport({ assemblySize: 10, minReportSize: 500, maxReportSize: 1000})
 const reportText = JSON.stringify(reportData, null, 2);
 ```
+## Build & Test
+
+```
+npm run clean
+npm install
+npm run build
+npm run test
+```
 
 ## Disclaimer
 
