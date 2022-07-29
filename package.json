@@ -1,7 +1,7 @@
 {
   "name": "@dstanesc/fake-metrology-data",
   "description": "Metrology synthetic data generation",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/dstanesc/fake-metrology-data",
   "repository": "https://github.com/dstanesc/fake-metrology-data",
   "license": "MIT",

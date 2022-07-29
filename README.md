@@ -2,6 +2,12 @@
 
 Generate fake metrology data for testing and benchmarks.
 
+## Install
+
+```
+npm install @dstanesc/fake-metrology-data
+```
+
 ## Usage
 
 Single part report, configured with the number of measurements to include `{reportSize: 300}`. The size is unconstrained
