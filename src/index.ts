@@ -2,12 +2,14 @@ import {
     MultipartMeta,
     PartMeta,
     multipartReport,
-    partReport
+    partReport,
+    partReports
 } from "./metrology";
 
 export {
     MultipartMeta,
     PartMeta,
     multipartReport,
-    partReport
+    partReport,
+    partReports
 }

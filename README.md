@@ -19,6 +19,19 @@ const reportData = partReport({reportSize: 300})
 const reportText = JSON.stringify(reportData, null, 2);
 ```
 
+Generate 2 almost identical reports (still w/ subtle differences). Useful for evaluation of content-defined chunking, data deduplication, incremental persistence, etc.
+
+```js
+import { 
+    partReports
+} from '@dstanesc/fake-metrology-data'
+       const reportsData = partReports({reportSize: 3})
+       const r1 = reportsData.one
+       const r2 = reportsData.two
+       const r1Text = JSON.stringify(r1, null, 2);
+       const r2Text = JSON.stringify(r2, null, 2);
+```
+
 More complex multipart report, configured with the number of parts to be generated (`assemblySize: 10`), the minimum number of measurements to be generated for the individual parts (`minReportSize: 500`), and the maximum number of measurements to be generated for the individual parts (`maxReportSize: 1000`)
 ```js
 import {

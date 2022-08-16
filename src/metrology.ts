@@ -38,6 +38,7 @@ export interface PartMeta {
     reportSize: number
 }
 
+
 /**
  * Generate a synthetic multipart metrology report. The report would include
  * 
@@ -60,16 +61,30 @@ export function multipartReport(meta: MultipartMeta): any {
 }
 
 /**
+ * Generate multiple synthetic multipart metrology reports with minor variations.
+ * 
+ * @param  {PartMeta} meta  Metadata for part report generation
+ * @return {Object}     A JSON object containing 2, only slightly different metrology reports
+ */
+export function partReports(meta: PartMeta): any {
+    return partReportInternal(meta);
+}
+
+/**
  * Generate a synthetic multipart metrology report.
  * 
  * @param  {PartMeta} meta  Metadata for part report generation
  * @return {Object}      A JSON object containing a single part metrology report
  */
 export function partReport(meta: PartMeta): any {
-    const timeMillis = Date.now()
-    const eventStart = faker.datatype.datetime({ min: timeMillis - 200, max: timeMillis - 100 })
-    const eventEnd = faker.datatype.datetime({ min: timeMillis + 100 * meta.reportSize, max: timeMillis + 300 * meta.reportSize })
-    const events = Array(meta.reportSize).fill(0).map(elem => { return { "Timestamp": faker.date.between(eventStart, eventEnd), "Status": faker.helpers.arrayElement(['PartProgramStarted', 'Running', 'Waiting', 'IdleWaiting', 'PartProgramEnded']) } })
+    return partReportInternal(meta).one;
+}
+
+function partReportInternal(meta: PartMeta) {
+    const timeMillis = Date.now();
+    const eventStart = faker.datatype.datetime({ min: timeMillis - 200, max: timeMillis - 100 });
+    const eventEnd = faker.datatype.datetime({ min: timeMillis + 100 * meta.reportSize, max: timeMillis + 300 * meta.reportSize });
+    const events = Array(meta.reportSize).fill(0).map(elem => { return { "Timestamp": faker.date.between(eventStart, eventEnd), "Status": faker.helpers.arrayElement(['PartProgramStarted', 'Running', 'Waiting', 'IdleWaiting', 'PartProgramEnded']) }; });
     const runInfo = {
         sessionGuid: uuid(),
         routineGuid: uuid(),
@@ -83,9 +98,11 @@ export function partReport(meta: PartMeta): any {
         eventEnd: eventEnd,
         timestamp: faker.date.between(eventStart, eventEnd),
         events: events
-    }
-    const measurements = generateMeasurements(runInfo, meta)
-    const warningData = measurements.filter(measureInfo => measureInfo.location.oTol > 0).map(measureInfo => {
+    };
+    const m1 = generateMeasurements(runInfo, meta);
+    const m2 = [...m1];
+    m2.push(generateMeasurement(runInfo, meta, Date.now(), m1.length, "Circle"));
+    const warningData = m1.filter(measureInfo => measureInfo.location.oTol > 0).map(measureInfo => {
         return {
             "featureGuid": measureInfo.featureGuid,
             "shortName": measureInfo.featureId,
@@ -94,17 +111,22 @@ export function partReport(meta: PartMeta): any {
             "isCriticalWarning": null,
             "isNonCriticalWarning": true,
             "deviation": measureInfo.location.deviation
-        }
-    })
-    runInfo["warningData"] = warningData
-    const dimensionResults = measurements.map(measureInfo => dimensionResultGenerator(measureInfo))
-    const featureResults = measurements.map(measureInfo => featureResultGenerator(measureInfo))
-    const reportData = {
-        "currentSample": currentSampleGenerator(runInfo, measurements),
+        };
+    });
+    runInfo["warningData"] = warningData;
+    const dimensionResults = m1.map(measureInfo => dimensionResultGenerator(measureInfo));
+    const featureResults = m1.map(measureInfo => featureResultGenerator(measureInfo));
+    const one = {
+        "currentSample": currentSampleGenerator(runInfo, m1),
         "dimensionResults": dimensionResults,
         "featureResults": featureResults
-    }
-    return reportData
+    };
+    const two = {
+        "currentSample": currentSampleGenerator(runInfo, m2),
+        "dimensionResults": dimensionResults,
+        "featureResults": featureResults
+    };
+    return { one, two };
 }
 
 export function generateMeasurements(runInfo: any, meta: any): any {
@@ -112,26 +134,30 @@ export function generateMeasurements(runInfo: any, meta: any): any {
     const timeMillis = Date.now();
     for (let index = 0; index < meta.reportSize; index++) {
         const featureType = faker.helpers.arrayElement(['Point', 'Line', 'Circle']);
-        const measureInfo = {
-            runInfo: runInfo,
-            operatorName: faker.name.findName(),
-            location: generateLocation(meta),
-            runEnd: faker.datatype.datetime({ min: timeMillis + 100 * index, max: timeMillis + 200 * index }),
-            orderIndex: index,
-            featureGuid: uuid(),
-            featureId: faker.hacker.adjective() + '-' + faker.hacker.noun(),
-            featureType: featureType,
-            propertiesObjectId: uuid(),
-            deviceId: runInfo.iotDeviceId + "-" + `HMISystem0-MeasurementSW0-MeasurementRoutine${faker.datatype.number(100)}-MeasurementFeature${index}`,
-            timestamp: faker.datatype.datetime({ min: timeMillis - 200 * index, max: timeMillis - 100 * index }),
-            indexedAt: faker.datatype.datetime({ min: timeMillis - 100 * index, max: timeMillis - 50 * index }),
-            enqueuedTime: faker.datatype.datetime(timeMillis),
-            objectId: uuid(),
-            data: generateMeasureData(meta, featureType)
-        }
+        const measureInfo = generateMeasurement(runInfo, meta, timeMillis, index, featureType)
         measurements.push(measureInfo)
     }
     return measurements
+}
+
+export function generateMeasurement(runInfo: any, meta: any, timeMillis: number, index: number, featureType: string) {
+    return {
+        runInfo: runInfo,
+        operatorName: faker.name.fullName(),
+        location: generateLocation(meta),
+        runEnd: faker.datatype.datetime({ min: timeMillis + 100 * index, max: timeMillis + 200 * index }),
+        orderIndex: index,
+        featureGuid: uuid(),
+        featureId: faker.hacker.adjective() + '-' + faker.hacker.noun(),
+        featureType: featureType,
+        propertiesObjectId: uuid(),
+        deviceId: runInfo.iotDeviceId + "-" + `HMISystem0-MeasurementSW0-MeasurementRoutine${faker.datatype.number(100)}-MeasurementFeature${index}`,
+        timestamp: faker.datatype.datetime({ min: timeMillis - 200 * index, max: timeMillis - 100 * index }),
+        indexedAt: faker.datatype.datetime({ min: timeMillis - 100 * index, max: timeMillis - 50 * index }),
+        enqueuedTime: faker.datatype.datetime(timeMillis),
+        objectId: uuid(),
+        data: generateMeasureData(meta, featureType)
+    };
 }
 
 export function currentSampleGenerator(runInfo: any, measurements: any): any {

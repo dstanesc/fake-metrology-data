@@ -1,0 +1,325 @@
+{
+    "currentSample": {
+      "runId": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+      "name": "Mini-system-8.2.5",
+      "routineGuid": "61575190-ee42-41e7-a4a8-3979677ac804",
+      "runDate": "2022-08-16T20:46:28.876Z",
+      "runEnd": "2022-08-16T20:46:29.154Z",
+      "status": "Failed",
+      "metrologyClient": "Pcdmis",
+      "latestRun": "{\"Status\":\"PartProgramCompleted\",\"ParentObjectID\":\"44f395cc-8fa3-4ffa-a602-82c9079ce171\",\"EventStart\":\"2022-08-16T20:46:28.152Z\",\"EventEnd\":\"2022-08-16T20:46:29.154Z\",\"EventType\":\"PartProgramCompleted\",\"IdealTime\":\"00:08:24\",\"ExecutionDuration\":\"00:29:47.2809170\",\"OeeDataType\":\"Ended\",\"ExecutionGuid\":\"f70f82c5-d91f-43b3-84d2-91a789af1509\",\"EndEventObjectID\":\"9232ad5f-6637-44d0-80f7-afcc5b1338fa\",\"OEEVerified\":true,\"ObjectID\":\"9232ad5f-6637-44d0-80f7-afcc5b1338fa\",\"DeviceID\":\"fba0d303-1d9f-491c-9f11-44845a1d0a0f-HMISystem0-MeasurementSW0-MeasurementRoutine3-MeasurementFeature3\",\"IoTDeviceID\":\"fba0d303-1d9f-491c-9f11-44845a1d0a0f\",\"DeviceClass\":\"OEEData\",\"MessageType\":\"Telemetry\",\"DayID\":\"637914941763445431\",\"ActiveRoutineDeviceID\":\"fba0d303-1d9f-491c-9f11-44845a1d0a0f\",\"RoutineName\":\"Mini-system-8.2.5\",\"RoutineGuid\":\"61575190-ee42-41e7-a4a8-3979677ac804\",\"InScheduleTime\":\"00:00:00\",\"UtcOffset\":1,\"Timestamp\":\"2022-08-16T20:46:28.876Z\",\"Events\":[{\"Timestamp\":\"2022-08-16T20:46:28.292Z\",\"Status\":\"PartProgramEnded\"},{\"Timestamp\":\"2022-08-16T20:46:29.073Z\",\"Status\":\"PartProgramEnded\"},{\"Timestamp\":\"2022-08-16T20:46:28.526Z\",\"Status\":\"Running\"}],\"IdleWaitingInSchedule\":\"00:00:00\",\"NumberOfFeaturesOutOfTolerance\":2,\"NumberOfFeaturesInTolerance\":2,\"MeasurementSession\":{\"PartDimensions\":0,\"TraceValues\":\"HJ96ZNM\",\"TraceTypes\":\"PartName\"},\"HasUploadedReports\":true}",
+      "dimensions": 4,
+      "inTolerance": 2,
+      "outOfTolerance": 2,
+      "warning": 2,
+      "warningData": [
+        {
+          "featureGuid": "ee247cf8-89d0-4189-9521-07b3ca32b811",
+          "shortName": "1080p-driver",
+          "criticalWarningPercentage": 60,
+          "nonCriticalWarningPercentage": 90,
+          "isCriticalWarning": null,
+          "isNonCriticalWarning": true,
+          "deviation": 0.8972630319185555
+        },
+        {
+          "featureGuid": "42a9b90d-dd8b-4f1c-8659-3af913a16b54",
+          "shortName": "bluetooth-system",
+          "criticalWarningPercentage": 60,
+          "nonCriticalWarningPercentage": 90,
+          "isCriticalWarning": null,
+          "isNonCriticalWarning": true,
+          "deviation": -0.6687766476534307
+        }
+      ]
+    },
+    "dimensionResults": [
+      {
+        "name": "cofactor",
+        "metadata": null,
+        "currentData": {
+          "run": {
+            "runId": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+            "traceFields": [
+              {
+                "type": "PartName",
+                "value": "HJ96ZNM"
+              },
+              {
+                "type": "Operator",
+                "value": "Mrs. Deborah Little"
+              }
+            ],
+            "latestMachine": "sed-fugiat-aspernatur",
+            "runEnd": "2022-08-16T20:46:28.262Z",
+            "warningSettings": "{\r\n  \"warningPercentNonCrit\": 90,\r\n  \"warningPercentCrit\": 60,\r\n  \"historyItemCount\": 10\r\n}"
+          },
+          "dimension": {
+            "orderIndex": 0,
+            "objectId": "4c79b279-7ebd-438d-9ff1-d2a6adf77fed",
+            "featureGuid": "1ec54916-8597-4335-92b5-95a785d88e9f",
+            "iotDeviceId": "fba0d303-1d9f-491c-9f11-44845a1d0a0f",
+            "runId": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+            "shortName": "cofactor",
+            "isOutOfTolerance": true,
+            "evaluation": "OutOfTolerance",
+            "deviation": "0.26890156883746386",
+            "bonusVal": null,
+            "measured": "44.173381008207805",
+            "measurement": {
+              "Measured": 44.173381008207805,
+              "MeasuredMin": null,
+              "MeasuredMax": null,
+              "Specification": "⌜",
+              "SpecificationFont": null,
+              "Features": "multi-byte-system",
+              "FeatureTypes": "Circle",
+              "DimensionType": "Location",
+              "Deviation": 0.26890156883746386,
+              "OTol": 0,
+              "BonusVal": null,
+              "IsOutOfTolerance": true,
+              "RoutineGuid": "61575190-ee42-41e7-a4a8-3979677ac804",
+              "Nominal": 43.90447943937034,
+              "CommandID": "cofactor",
+              "VersionInfoObjectID": "c249dff8-e99c-43fd-992a-a8472e21a63a",
+              "USL": 0.05,
+              "LSL": -0.05,
+              "UWL": null,
+              "LWL": null,
+              "Evaluation": "OutOfTolerance",
+              "Units": "Millimeters",
+              "Algorithm": "Unknown",
+              "Standard": "Unknown",
+              "ExecutionGuid": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+              "MessageType": "Event",
+              "PropertiesObjectID": "7e16e7b8-5681-432b-8f42-62ee786dd2c3",
+              "Status": "Info",
+              "EventDescription": "Dimension-cofactor",
+              "EventType": "FeatureFailed",
+              "FaultCause": null,
+              "FaultSolution": null,
+              "Disabled": null,
+              "DeviceID": "fba0d303-1d9f-491c-9f11-44845a1d0a0f-HMISystem0-MeasurementSW0-MeasurementRoutine49-MeasurementFeature0",
+              "IoTDeviceID": "fba0d303-1d9f-491c-9f11-44845a1d0a0f",
+              "ObjectID": "4c79b279-7ebd-438d-9ff1-d2a6adf77fed",
+              "ParentObjectID": "44f395cc-8fa3-4ffa-a602-82c9079ce171",
+              "Timestamp": "2022-08-16T20:46:28.262Z",
+              "DeviceClass": "MeasurementFeature",
+              "DeviceType": "MeasurementFeatureGeneric",
+              "IndexedAt": "2022-08-16T20:46:28.262Z",
+              "EnqueuedTime": "2004-10-16T22:31:05.489Z",
+              "SourcePartition": "30",
+              "Location": "Shop Floor"
+            },
+            "failedNelsonRules": [],
+            "failedNelsonRuleIds": [],
+            "deviationPercentage": 1.00608741198206,
+            "schema": 2
+          }
+        },
+        "pastData": []
+      },
+      {
+        "name": "hose",
+        "metadata": null,
+        "currentData": {
+          "run": {
+            "runId": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+            "traceFields": [
+              {
+                "type": "PartName",
+                "value": "HJ96ZNM"
+              },
+              {
+                "type": "Operator",
+                "value": "Mrs. Ramon Jenkins"
+              }
+            ],
+            "latestMachine": "sed-fugiat-aspernatur",
+            "runEnd": "2022-08-16T20:46:28.380Z",
+            "warningSettings": "{\r\n  \"warningPercentNonCrit\": 90,\r\n  \"warningPercentCrit\": 60,\r\n  \"historyItemCount\": 10\r\n}"
+          },
+          "dimension": {
+            "orderIndex": 1,
+            "objectId": "6d847abb-2358-4cbc-beac-7db8d230c0e4",
+            "featureGuid": "ee247cf8-89d0-4189-9521-07b3ca32b811",
+            "iotDeviceId": "fba0d303-1d9f-491c-9f11-44845a1d0a0f",
+            "runId": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+            "shortName": "hose",
+            "isOutOfTolerance": true,
+            "evaluation": "OutOfTolerance",
+            "deviation": "0.8972630319185555",
+            "bonusVal": null,
+            "measured": "75.04329499974848",
+            "measurement": {
+              "Measured": 75.04329499974848,
+              "MeasuredMin": null,
+              "MeasuredMax": null,
+              "Specification": "⌜",
+              "SpecificationFont": null,
+              "Features": "1080p-driver",
+              "FeatureTypes": "Circle",
+              "DimensionType": "Location",
+              "Deviation": 0.8972630319185555,
+              "OTol": 0.5755346352234485,
+              "BonusVal": null,
+              "IsOutOfTolerance": true,
+              "RoutineGuid": "61575190-ee42-41e7-a4a8-3979677ac804",
+              "Nominal": 74.14603196782993,
+              "CommandID": "hose",
+              "VersionInfoObjectID": "c249dff8-e99c-43fd-992a-a8472e21a63a",
+              "USL": 0.05,
+              "LSL": -0.05,
+              "UWL": null,
+              "LWL": null,
+              "Evaluation": "OutOfTolerance",
+              "Units": "Millimeters",
+              "Algorithm": "Unknown",
+              "Standard": "Unknown",
+              "ExecutionGuid": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+              "MessageType": "Event",
+              "PropertiesObjectID": "020e2456-1422-460f-aee5-2396417d56d7",
+              "Status": "Info",
+              "EventDescription": "Dimension-hose",
+              "EventType": "FeatureFailed",
+              "FaultCause": null,
+              "FaultSolution": null,
+              "Disabled": null,
+              "DeviceID": "fba0d303-1d9f-491c-9f11-44845a1d0a0f-HMISystem0-MeasurementSW0-MeasurementRoutine70-MeasurementFeature1",
+              "IoTDeviceID": "fba0d303-1d9f-491c-9f11-44845a1d0a0f",
+              "ObjectID": "6d847abb-2358-4cbc-beac-7db8d230c0e4",
+              "ParentObjectID": "44f395cc-8fa3-4ffa-a602-82c9079ce171",
+              "Timestamp": "2022-08-16T20:46:28.074Z",
+              "DeviceClass": "MeasurementFeature",
+              "DeviceType": "MeasurementFeatureGeneric",
+              "IndexedAt": "2022-08-16T20:46:28.193Z",
+              "EnqueuedTime": "1996-03-05T00:47:48.830Z",
+              "SourcePartition": "30",
+              "Location": "Shop Floor"
+            },
+            "failedNelsonRules": [],
+            "failedNelsonRuleIds": [],
+            "deviationPercentage": 1.0119566049428075,
+            "schema": 2
+          }
+        },
+        "pastData": []
+      },
+      {
+        "name": "ambassador",
+        "metadata": null,
+        "currentData": {
+          "run": {
+            "runId": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+            "traceFields": [
+              {
+                "type": "PartName",
+                "value": "HJ96ZNM"
+              },
+              {
+                "type": "Operator",
+                "value": "Bennie Carroll"
+              }
+            ],
+            "latestMachine": "sed-fugiat-aspernatur",
+            "runEnd": "2022-08-16T20:46:28.578Z",
+            "warningSettings": "{\r\n  \"warningPercentNonCrit\": 90,\r\n  \"warningPercentCrit\": 60,\r\n  \"historyItemCount\": 10\r\n}"
+          },
+          "dimension": {
+            "orderIndex": 2,
+            "objectId": "c31e3c0f-c1d3-42e2-9006-00be467c78ea",
+            "featureGuid": "42a9b90d-dd8b-4f1c-8659-3af913a16b54",
+            "iotDeviceId": "fba0d303-1d9f-491c-9f11-44845a1d0a0f",
+            "runId": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+            "shortName": "ambassador",
+            "isOutOfTolerance": true,
+            "evaluation": "OutOfTolerance",
+            "deviation": "-0.6687766476534307",
+            "bonusVal": null,
+            "measured": "82.49234338290991",
+            "measurement": {
+              "Measured": 82.49234338290991,
+              "MeasuredMin": null,
+              "MeasuredMax": null,
+              "Specification": "⌜",
+              "SpecificationFont": null,
+              "Features": "bluetooth-system",
+              "FeatureTypes": "Line",
+              "DimensionType": "Location",
+              "Deviation": -0.6687766476534307,
+              "OTol": 0.6434162901714447,
+              "BonusVal": null,
+              "IsOutOfTolerance": true,
+              "RoutineGuid": "61575190-ee42-41e7-a4a8-3979677ac804",
+              "Nominal": 83.16112003056334,
+              "CommandID": "ambassador",
+              "VersionInfoObjectID": "c249dff8-e99c-43fd-992a-a8472e21a63a",
+              "USL": 0.05,
+              "LSL": -0.05,
+              "UWL": null,
+              "LWL": null,
+              "Evaluation": "OutOfTolerance",
+              "Units": "Millimeters",
+              "Algorithm": "Unknown",
+              "Standard": "Unknown",
+              "ExecutionGuid": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+              "MessageType": "Event",
+              "PropertiesObjectID": "a43745b2-bb35-4193-97bc-04dc11323c20",
+              "Status": "Info",
+              "EventDescription": "Dimension-ambassador",
+              "EventType": "FeatureFailed",
+              "FaultCause": null,
+              "FaultSolution": null,
+              "Disabled": null,
+              "DeviceID": "fba0d303-1d9f-491c-9f11-44845a1d0a0f-HMISystem0-MeasurementSW0-MeasurementRoutine13-MeasurementFeature2",
+              "IoTDeviceID": "fba0d303-1d9f-491c-9f11-44845a1d0a0f",
+              "ObjectID": "c31e3c0f-c1d3-42e2-9006-00be467c78ea",
+              "ParentObjectID": "44f395cc-8fa3-4ffa-a602-82c9079ce171",
+              "Timestamp": "2022-08-16T20:46:27.993Z",
+              "DeviceClass": "MeasurementFeature",
+              "DeviceType": "MeasurementFeatureGeneric",
+              "IndexedAt": "2022-08-16T20:46:28.139Z",
+              "EnqueuedTime": "1995-07-11T12:38:03.485Z",
+              "SourcePartition": "30",
+              "Location": "Shop Floor"
+            },
+            "failedNelsonRules": [],
+            "failedNelsonRuleIds": [],
+            "deviationPercentage": 0.9918928639892174,
+            "schema": 2
+          }
+        },
+        "pastData": []
+      }
+    ],
+    "featureResults": [
+      {
+        "featureGuid": "1ec54916-8597-4335-92b5-95a785d88e9f",
+        "runId": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+        "measurementSoftwareGuid": "c249dff8-e99c-43fd-992a-a8472e21a63a",
+        "routineGuid": "61575190-ee42-41e7-a4a8-3979677ac804",
+        "shortName": "multi-byte-system",
+        "featureType": "Circle",
+        "jsonData": "{\"RoutineGuid\":\"61575190-ee42-41e7-a4a8-3979677ac804\",\"ExecutionGuid\":null,\"CommandId\":null,\"VersionInfoObjectID\":\"c249dff8-e99c-43fd-992a-a8472e21a63a\",\"Description\":\"multi-byte-system Measured on:  MOF_2022_2.PRG\",\"FeatureType\":\"Circle\",\"FeatureGuid\":\"1ec54916-8597-4335-92b5-95a785d88e9f\",\"SessionGuid\":\"f70f82c5-d91f-43b3-84d2-91a789af1509\",\"FeatureId\":\"multi-byte-system\",\"MessageType\":\"Event\",\"PropertiesObjectID\":\"7e16e7b8-5681-432b-8f42-62ee786dd2c3\",\"Status\":\"Info\",\"EventDescription\":\"multi-byte-system Measured on:  MOF_2022_2.PRG\",\"EventType\":\"FeatureMeasured\",\"FaultCause\":null,\"FaultSolution\":null,\"Disabled\":null,\"DeviceID\":\"fba0d303-1d9f-491c-9f11-44845a1d0a0f-HMISystem0-MeasurementSW0-MeasurementRoutine49-MeasurementFeature0\",\"IoTDeviceID\":\"fba0d303-1d9f-491c-9f11-44845a1d0a0f\",\"ObjectID\":\"f4d1adc2-bebc-4155-bc7d-2bdbe3aeea4a\",\"ParentObjectID\":\"44f395cc-8fa3-4ffa-a602-82c9079ce171\",\"Timestamp\":\"2022-08-16T20:46:28.262Z\",\"DeviceClass\":\"MeasuredFeature\",\"DeviceType\":\"Circle\",\"IndexedAt\":\"2022-08-16T20:46:28.262Z\",\"EnqueuedTime\":\"2004-10-16T22:31:05.489Z\",\"SourcePartition\":\"30\",\"Location\":\"Shop Floor\",\"MeasuredNormalI\":0,\"MeasuredNormalJ\":0,\"MeasuredNormalK\":1,\"MeasuredX\":0,\"MeasuredY\":0,\"MeasuredZ\":0,\"NominalNormalI\":0,\"NominalNormalJ\":0,\"NominalNormalK\":1,\"NominalX\":0,\"NominalY\":0,\"NominalZ\":0,\"NominalCenterX\":881.9492044020444,\"NominalCenterY\":54.14324420737103,\"NominalCenterZ\":366.4814490242861,\"MeasuredCenterX\":882.696128741838,\"MeasuredCenterY\":53.730013781227186,\"MeasuredCenterZ\":365.5154805434868,\"NominalDiameter\":994.696305799298,\"MeasuredDiameter\":994.869411630556,\"NominalLength\":0,\"MeasuredLength\":0,\"NominalStartX\":0,\"NominalStartY\":0,\"NominalStartZ\":0,\"NominalEndX\":0,\"NominalEndY\":0,\"NominalEndZ\":0,\"MeasuredStartX\":0,\"MeasuredStartY\":0,\"MeasuredStartZ\":0,\"MeasuredEndX\":0,\"MeasuredEndY\":0,\"MeasuredEndZ\":0,\"NominalAngleVectorI\":0.5188284461133035,\"NominalAngleVectorJ\":0.7561402907990245,\"NominalAngleVectorK\":0.7916898205577751,\"NominalStartAngle\":0,\"NominalEndAngle\":0,\"NominalInternal\":true,\"MeasuredStartAngle\":0,\"MeasuredEndAngle\":0,\"NominalMajorDiameter\":0,\"NominalMinorDiameter\":0,\"MeasuredMajorDiameter\":0,\"MeasuredMinorDiameter\":0,\"NominalWidth\":0,\"MeasuredWidth\":0,\"NominalNumberOfSides\":0}"
+      },
+      {
+        "featureGuid": "ee247cf8-89d0-4189-9521-07b3ca32b811",
+        "runId": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+        "measurementSoftwareGuid": "c249dff8-e99c-43fd-992a-a8472e21a63a",
+        "routineGuid": "61575190-ee42-41e7-a4a8-3979677ac804",
+        "shortName": "1080p-driver",
+        "featureType": "Circle",
+        "jsonData": "{\"RoutineGuid\":\"61575190-ee42-41e7-a4a8-3979677ac804\",\"ExecutionGuid\":null,\"CommandId\":null,\"VersionInfoObjectID\":\"c249dff8-e99c-43fd-992a-a8472e21a63a\",\"Description\":\"1080p-driver Measured on:  MOF_2022_2.PRG\",\"FeatureType\":\"Circle\",\"FeatureGuid\":\"ee247cf8-89d0-4189-9521-07b3ca32b811\",\"SessionGuid\":\"f70f82c5-d91f-43b3-84d2-91a789af1509\",\"FeatureId\":\"1080p-driver\",\"MessageType\":\"Event\",\"PropertiesObjectID\":\"020e2456-1422-460f-aee5-2396417d56d7\",\"Status\":\"Info\",\"EventDescription\":\"1080p-driver Measured on:  MOF_2022_2.PRG\",\"EventType\":\"FeatureMeasured\",\"FaultCause\":null,\"FaultSolution\":null,\"Disabled\":null,\"DeviceID\":\"fba0d303-1d9f-491c-9f11-44845a1d0a0f-HMISystem0-MeasurementSW0-MeasurementRoutine70-MeasurementFeature1\",\"IoTDeviceID\":\"fba0d303-1d9f-491c-9f11-44845a1d0a0f\",\"ObjectID\":\"2a71d19c-cf9b-460f-963d-d39f49ef0239\",\"ParentObjectID\":\"44f395cc-8fa3-4ffa-a602-82c9079ce171\",\"Timestamp\":\"2022-08-16T20:46:28.074Z\",\"DeviceClass\":\"MeasuredFeature\",\"DeviceType\":\"Circle\",\"IndexedAt\":\"2022-08-16T20:46:28.193Z\",\"EnqueuedTime\":\"1996-03-05T00:47:48.830Z\",\"SourcePartition\":\"30\",\"Location\":\"Shop Floor\",\"MeasuredNormalI\":0,\"MeasuredNormalJ\":0,\"MeasuredNormalK\":1,\"MeasuredX\":0,\"MeasuredY\":0,\"MeasuredZ\":0,\"NominalNormalI\":0,\"NominalNormalJ\":0,\"NominalNormalK\":1,\"NominalX\":0,\"NominalY\":0,\"NominalZ\":0,\"NominalCenterX\":25.424797814339403,\"NominalCenterY\":740.0592398038133,\"NominalCenterZ\":951.5310422098264,\"MeasuredCenterX\":24.648253472987566,\"MeasuredCenterY\":740.767753029242,\"MeasuredCenterZ\":952.0427638534456,\"NominalDiameter\":792.1125338319689,\"MeasuredDiameter\":792.3818960483187,\"NominalLength\":0,\"MeasuredLength\":0,\"NominalStartX\":0,\"NominalStartY\":0,\"NominalStartZ\":0,\"NominalEndX\":0,\"NominalEndY\":0,\"NominalEndZ\":0,\"MeasuredStartX\":0,\"MeasuredStartY\":0,\"MeasuredStartZ\":0,\"MeasuredEndX\":0,\"MeasuredEndY\":0,\"MeasuredEndZ\":0,\"NominalAngleVectorI\":0.8508260040288882,\"NominalAngleVectorJ\":0.7461706010628033,\"NominalAngleVectorK\":0.10182386490419959,\"NominalStartAngle\":0,\"NominalEndAngle\":0,\"NominalInternal\":true,\"MeasuredStartAngle\":0,\"MeasuredEndAngle\":0,\"NominalMajorDiameter\":0,\"NominalMinorDiameter\":0,\"MeasuredMajorDiameter\":0,\"MeasuredMinorDiameter\":0,\"NominalWidth\":0,\"MeasuredWidth\":0,\"NominalNumberOfSides\":0}"
+      },
+      {
+        "featureGuid": "42a9b90d-dd8b-4f1c-8659-3af913a16b54",
+        "runId": "f70f82c5-d91f-43b3-84d2-91a789af1509",
+        "measurementSoftwareGuid": "c249dff8-e99c-43fd-992a-a8472e21a63a",
+        "routineGuid": "61575190-ee42-41e7-a4a8-3979677ac804",
+        "shortName": "bluetooth-system",
+        "featureType": "Line",
+        "jsonData": "{\"RoutineGuid\":\"61575190-ee42-41e7-a4a8-3979677ac804\",\"ExecutionGuid\":null,\"CommandId\":null,\"VersionInfoObjectID\":\"c249dff8-e99c-43fd-992a-a8472e21a63a\",\"Description\":\"bluetooth-system Measured on:  MOF_2022_2.PRG\",\"FeatureType\":\"Line\",\"FeatureGuid\":\"42a9b90d-dd8b-4f1c-8659-3af913a16b54\",\"SessionGuid\":\"f70f82c5-d91f-43b3-84d2-91a789af1509\",\"FeatureId\":\"bluetooth-system\",\"MessageType\":\"Event\",\"PropertiesObjectID\":\"a43745b2-bb35-4193-97bc-04dc11323c20\",\"Status\":\"Info\",\"EventDescription\":\"bluetooth-system Measured on:  MOF_2022_2.PRG\",\"EventType\":\"FeatureMeasured\",\"FaultCause\":null,\"FaultSolution\":null,\"Disabled\":null,\"DeviceID\":\"fba0d303-1d9f-491c-9f11-44845a1d0a0f-HMISystem0-MeasurementSW0-MeasurementRoutine13-MeasurementFeature2\",\"IoTDeviceID\":\"fba0d303-1d9f-491c-9f11-44845a1d0a0f\",\"ObjectID\":\"1af67631-2636-4ce0-b787-87ba590a1266\",\"ParentObjectID\":\"44f395cc-8fa3-4ffa-a602-82c9079ce171\",\"Timestamp\":\"2022-08-16T20:46:27.993Z\",\"DeviceClass\":\"MeasuredFeature\",\"DeviceType\":\"Circle\",\"IndexedAt\":\"2022-08-16T20:46:28.139Z\",\"EnqueuedTime\":\"1995-07-11T12:38:03.485Z\",\"SourcePartition\":\"30\",\"Location\":\"Shop Floor\",\"MeasuredNormalI\":0.10450812412882901,\"MeasuredNormalJ\":0.012713647444672002,\"MeasuredNormalK\":0.539913108068619,\"MeasuredX\":0,\"MeasuredY\":0,\"MeasuredZ\":0,\"NominalNormalI\":0.06912430592338303,\"NominalNormalJ\":0.09517539478553072,\"NominalNormalK\":0.09517539478553072,\"NominalX\":0,\"NominalY\":0,\"NominalZ\":0,\"NominalCenterX\":0,\"NominalCenterY\":0,\"NominalCenterZ\":0,\"MeasuredCenterX\":0,\"MeasuredCenterY\":0,\"MeasuredCenterZ\":0,\"NominalDiameter\":0,\"MeasuredDiameter\":0,\"NominalLength\":0,\"MeasuredLength\":0,\"NominalStartX\":128.79625260364264,\"NominalStartY\":125.59315063524991,\"NominalStartZ\":431.9983974774368,\"NominalEndX\":580.5441470281222,\"NominalEndY\":910.0235523516312,\"NominalEndZ\":264.2561839334667,\"MeasuredStartX\":128.78339805500585,\"MeasuredStartY\":124.64840369159357,\"MeasuredStartZ\":431.767552962061,\"MeasuredEndX\":580.1588076874615,\"MeasuredEndY\":909.142171824351,\"MeasuredEndZ\":265.2274508359842,\"NominalAngleVectorI\":0,\"NominalAngleVectorJ\":0,\"NominalAngleVectorK\":0,\"NominalStartAngle\":0,\"NominalEndAngle\":0,\"NominalInternal\":false,\"MeasuredStartAngle\":0,\"MeasuredEndAngle\":0,\"NominalMajorDiameter\":0,\"NominalMinorDiameter\":0,\"MeasuredMajorDiameter\":0,\"MeasuredMinorDiameter\":0,\"NominalWidth\":0,\"MeasuredWidth\":0,\"NominalNumberOfSides\":0}"
+      }
+    ]
+  }
